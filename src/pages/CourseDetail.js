@@ -110,7 +110,7 @@ const CourseDetail = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Sticky navigation */}
+      {/* Sticky navigation
       <div className="sticky top-0 z-10 bg-white shadow-md">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/courses" className="flex items-center text-indigo-600 hover:text-indigo-800">
@@ -121,10 +121,10 @@ const CourseDetail = () => {
             Enroll Now
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Hero Section with enhanced design */}
-      <div className="bg-gradient-to-r from-indigo-800 to-indigo-600 text-white">
+      <div className="  bg-gradient-to-r from-indigo-500 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-7/12 space-y-6">

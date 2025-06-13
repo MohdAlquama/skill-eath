@@ -110,7 +110,7 @@ const Courses = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="text-center max-w-3xl mx-auto mb-10"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-4">
           Explore  Courses
         </h1>
         <p className="text-gray-700 text-lg md:text-xl">
