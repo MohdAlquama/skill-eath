@@ -2,9 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const partners = [
-  { name: 'Company A', logo: '/partners/companyA.png' },
-  { name: 'Company B', logo: '/partners/companyB.png' },
-  { name: 'Company C', logo: '/partners/companyC.png' },
+  { name: 'WTF', logo: '/partners/companyA.png' },
+
 ];
 
 const Partners = () => (
@@ -15,7 +14,7 @@ const Partners = () => (
     transition={{ duration: 0.6 }}
     viewport={{ once: true }}
   >
-    <h2 className="text-3xl font-semibold text-center text-indigo-600 mb-8">Our Partners</h2>
+    <h2 className="text-3xl font-semibold text-center text-indigo-600 mb-8">Our Associat Partner</h2>
     <div className="flex justify-center items-center space-x-8">
       {partners.map(({ name, logo }) => (
         <motion.img
