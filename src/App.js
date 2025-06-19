@@ -9,6 +9,7 @@ import ContactPage from "./pages/contact";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import StudentSports from "./components/StudentSports";
 import NotFound from "./pages/NotFound";
+import CoursesPakage from "./components/course/CoursesPakage";
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses" element={<CoursesPakage />} />
           <Route path="/courses/:id" element={<CourseDetail />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

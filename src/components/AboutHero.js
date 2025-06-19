@@ -8,7 +8,7 @@ const AboutHero = () => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
-    <h1 className="text-4xl md:text-5xl font-bold text-indigo-600 mb-4">About Skill Earth Academy</h1>
+    <h1 className="text-4xl md:text-5xl font-bold text-indigo-800 mb-4">About Skill Earth Academy</h1>
     <p className="text-gray-700 max-w-3xl mx-auto text-lg">
       Empowering learners with skills for tomorrow. We are committed to delivering top-tier education and practical training to prepare students for real-world success.
     </p>

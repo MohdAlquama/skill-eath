@@ -117,8 +117,8 @@ import ContactInfo from '../components/ContactInfo';
 
 const About = () => (
   <div 
-    className="pt-24 min-h-screen bg-gradient-to-b from-indigo-100 via-white to-indigo-100"
-    style={{ color: '#1e3a8a' }} // dark indigo text color for consistency
+    className="pt-24 min-h-screen overflow-hidden bg-gradient-to-l from-white to-indigo-400"
+    // style={{ color: '#1e3a8a' }} // dark indigo text color for consistency
   >
     <AboutHero />
     <MissionVision />
@@ -126,7 +126,7 @@ const About = () => (
     <Team />
     <Testimonials />
     <FAQ />
-    {/* <Partners /> */}
+    <Partners />
     <ContactInfo />
   </div>
 );

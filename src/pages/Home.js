@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Award, ArrowRight, Menu, X, ChevronDown, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Link } from 'lucide-react';
+import { BookOpen, Code, Award, ArrowRight, Menu, X, ChevronDown, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin} from 'lucide-react';
 import Courses from "./CoursePage";
 import { Users, User } from 'lucide-react';
 import courses from "../data/courses";
 import { FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 // Hero Section
 // const HeroSection = () => {
@@ -116,14 +117,14 @@ const HeroSection = () => {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-300 rounded-full blur-3xl animate-pulse"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* <div className="mb-8 animate-fade-in-down">
+<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12 sm:mt-4">   
+         {/* <div className="mb-8 animate-fade-in-down">
             <span className="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-4 shadow-lg">
               🎓 Shaping Future Leaders Since 2009
             </span>
           </div> */}
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-600 leading-tight tracking-tight mb-6 animate-fade-in-up">
             Master New Skills At 
             <span className="block text-indigo-900">Skills Earth Academy</span>
           </h1>
@@ -137,17 +138,21 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up animation-delay-400">
+            <Link to="/courses">
             <button className="group bg-white text-indigo-600 font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2 text-lg">
               <span>Explore Courses</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
+            </Link>
+            <Link to="/contact">
             <button className="group border-2 border-indigo-100 text-indigo-400 font-semibold px-8 py-4 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 text-lg">
               Learn More
             </button>
+            </Link>
           </div>
 
           {/* Student Enrollment Animation */}
-          <div className="flex flex-col items-center text-indigo-50 mb-12 animate-fade-in-up animation-delay-500">
+          <div className="flex flex-col items-center text-indigo-950 mb-12 animate-fade-in-up animation-delay-500">
             <div className="flex -space-x-3 mb-4">
               {[
                 { bg: 'bg-indigo-300', char: 'A' },
@@ -164,7 +169,7 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <div className="text-base font-semibold mb-4">
+            <div className="text-base font-semibold mb-4 ">
               <span className="text-2xl font-bold">5000+</span> students already enrolled!
             </div>
             <div className="w-64 h-3 bg-white rounded-full overflow-hidden shadow-inner">
@@ -460,7 +465,7 @@ const TestimonialsSection = () => {
 
   return (
 
-      <section className="py-20 bg-indigo-100 text-gray-800">
+      <section className="py-20 bg-gradient-to-l from-indigo-400 to-white text-gray-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -472,7 +477,7 @@ const TestimonialsSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               What Our Students Say
             </h2>
-            <p className="mt-4 text-lg text-indigo-700 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-black max-w-2xl mx-auto">
               Hear from our community of learners who have transformed their careers through our platform.
             </p>
           </motion.div>
@@ -607,33 +612,40 @@ function Home() {
         <FeaturesSection />
 
         {/* <PopularCoursesSection /> */}
-        <section className="py-20 bg-indigo-500 text-white">
+        <section className="py-20 bg-gradient-to-l from-indigo-400 to-white text-indigo-950">
   <div className="container mx-auto px-6">
     <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
       <div className="mb-8 md:mb-0 text-center md:text-left max-w-xl">
        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-md">
-  Your Journey to <span className="underline decoration-white/70">Success</span> Starts Here
+  Your Journey to <span className="underline decoration-black">Success</span> Starts Here
 </h2>
-<p className="text-lg md:text-xl text-indigo-100 leading-relaxed">
+<p className="text-lg md:text-xl text-black leading-relaxed">
   Discover expert-led coaching, personalized support, and the tools you need to thrive. Schedule a <strong>free session</strong> today.
 </p>
 
       </div>
       <div>
+  <Link to="/contact">
    <button className="bg-white text-indigo-600 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-2">
         <span>Get Started Now</span>
         <ArrowRight className="w-5 h-5" />
       </button>
+  </Link>
 
       </div>
     </div>
   </div>
 </section>
 
-      <section className="py-20 bg-white text-gray-800">
+     <section className="py-20 bg-gradient-to-r from-white to-white text-gray-800">
   <div className="container mx-auto px-6">
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-600">Our Popular Courses</h2>
-    
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-indigo-600">
+      Amazing Training Programs
+    </h2>
+    <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      We are highly recognized in the field of training. At Techpile, we provide exceptional development training programs led by experienced professionals. Join our popular programs and gain industry-relevant skills from expert consultants.
+    </p>
+
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {courses.map((course) => (
         <div
@@ -659,19 +671,20 @@ function Home() {
 
 
 
+
         <TestimonialsSection />
 
    {/* Contact Section */}
-     <section className="py-20 bg-white">
+     <section className="py-20 bg-gradient-to-r from-white to-white">
   <div className="container mx-auto px-6">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       {/* Contact Info */}
       <div>
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-indigo-950">
           Contact Us
         </h2>
         <div className="h-1 w-20 bg-indigo-500 mb-6"></div>
-        <p className="text-gray-600 mb-10 text-lg leading-relaxed">
+        <p className="text-black mb-10 text-lg leading-relaxed">
           Have questions or ready to start your project? Reach out to our team using any of the methods below.
         </p>
 
@@ -688,7 +701,7 @@ function Home() {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-gray-800">Address</h3>
-              <p className="text-gray-600">
+              <p className="text-black">
                 B-8, New Delhi Main Rd, Aggarwal Market, Molarband <br/> Badarpur, New Delhi, Delhi 110044
               </p>
             </div>
@@ -704,7 +717,7 @@ function Home() {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-gray-800">Email</h3>
-              <p className="text-gray-600">setbizsolutions@gmail.com</p>
+              <p className="text-black">setbizsolutions@gmail.com</p>
             </div>
           </div>
 
@@ -718,8 +731,8 @@ function Home() {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
-              <p className="text-gray-600">9026226199</p> 
-               <p className="text-gray-600">9625042987</p>
+              <p className="text-black">9026226199</p> 
+               <p className="text-black">9625042987</p>
             </div>
           </div>
         </div>
@@ -768,7 +781,7 @@ function Home() {
   </div>
 </section>
 
-        <NewsletterSection />
+        {/* <NewsletterSection /> */}
       </main>
       
     </div>
